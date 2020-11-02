@@ -3,83 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>HotHotHot</title>
+    <link href="sass/style.css" rel="stylesheet">
+    <script type="text/javascript" src="Chart.js-2.9.4/dist/Chart.min.js"></script>
 </head>
 <body>
 
-    <section>
-        <header>
-            <a href="#"><h1>HotHotHot!</h1></a>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#">Capteurs</a></li>
-                <li><a href="#">Alertes</a></li>
-                <li><a href="#">Compte</a></li>
-                <li><a href="#">Deconnexion</a></li>
-            </ul>
-        </nav>
-        <footer>
-            <p>Pre-release Mockup</p>
-        </footer>
+    <section class="grid-layout">
+        <section>
+            <header>
+                <a href="#"><h1>HotHotHot!</h1></a>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Capteurs</a></li>
+                    <li><a href="#">Alertes</a></li>
+                    <li><a href="#">Compte</a></li>
+                    <li><a href="#">Deconnexion</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p>Pre-release Mockup</p>
+            </footer>
+        </section>
+
+        <main class="small-6 large-8 columns">
+            <section>
+                <h1>Le nom du capteur</h1>
+                <label for="capteurs">Capteurs</label>
+                <select id="capteurs">
+                    <option value="Capteur 1">Capteur 1</option>
+                    <option value="Capteur 2">Capteur 2</option>
+                    <option value="Capteur 3">Capteur 3</option>
+                    <option value="Capteur 4">Capteur 4</option>
+                </select>
+                <label for="date">La date</label>
+                <input type="date" id="date">
+                <canvas id="myChart"></canvas>
+            </section>
+            <footer>
+                <ul>
+                    <li><a href="#">Capteur 1</a></li>
+                    <li><a href="#">Capteur 2</a></li>
+                    <li><a href="#">Capteur 3</a></li>
+                    <li><a href="#">Capteur 4</a></li>
+                </ul>
+            </footer>
+        </main>
+
+        <section class="small-12 large-2 columns">
+            <header>
+                <h1>Alertes (6)</h1>
+            </header>
+            <section>
+                <ul>
+                    <li>
+                        <h2>Intérieur</h2>
+                        <h3>Le 29/09/2020 à 13:45</h3>
+                    </li>
+                    <li>
+                        <h2>Exterieur</h2>
+                        <h3>Le 29/09/2020 à 11:35</h3>
+                    </li>
+                    <li>
+                        <h2>Intérieur</h2>
+                        <h3>Le 29/09/2020 à 08:21</h3>
+                    </li>
+                    <li>
+                        <h2>Capteur fictif 2</h2>
+                        <h3>Le 29/09/2020 à 06:00</h3>
+                    </li>
+                    <li>
+                        <h2>Capteur fictif 1</h2>
+                        <h3>Le 29/09/2020 à 04:00</h3>
+                    </li>
+                    <li>
+                        <h2>Intérieur</h2>
+                        <h3>Le 29/09/2020 à 03:55</h3>
+                    </li>
+                </ul>
+            </section>
+        </section>
     </section>
 
-    <main class="small-6 large-8 columns">
-        <section>
-            <h1>Le nom du capteur</h1>
-            <label for="capteurs">Capteurs</label>
-            <select id="capteurs">
-                <option value="Capteur 1">Capteur 1</option>
-                <option value="Capteur 2">Capteur 2</option>
-                <option value="Capteur 3">Capteur 3</option>
-                <option value="Capteur 4">Capteur 4</option>
-            </select>
-            <label for="date">La date</label>
-            <input type="date" id="date">
-            <canvas></canvas>
-        </section>
-        <footer>
-            <ul>
-                <li><a href="#">Capteur 1</a></li>
-                <li><a href="#">Capteur 2</a></li>
-                <li><a href="#">Capteur 3</a></li>
-                <li><a href="#">Capteur 4</a></li>
-            </ul>
-        </footer>
-    </main>
-
-    <section class="small-12 large-2 columns">
-        <header>
-            <h1>Alertes (6)</h1>
-        </header>
-        <section>
-            <ul>
-                <li>
-                    <h2>Intérieur</h2>
-                    <h3>Le 29/09/2020 à 13:45</h3>
-                </li>
-                <li>
-                    <h2>Exterieur</h2>
-                    <h3>Le 29/09/2020 à 11:35</h3>
-                </li>
-                <li>
-                    <h2>Intérieur</h2>
-                    <h3>Le 29/09/2020 à 08:21</h3>
-                </li>
-                <li>
-                    <h2>Capteur fictif 2</h2>
-                    <h3>Le 29/09/2020 à 06:00</h3>
-                </li>
-                <li>
-                    <h2>Capteur fictif 1</h2>
-                    <h3>Le 29/09/2020 à 04:00</h3>
-                </li>
-                <li>
-                    <h2>Intérieur</h2>
-                    <h3>Le 29/09/2020 à 03:55</h3>
-                </li>
-            </ul>
-        </section>
-    </section>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
