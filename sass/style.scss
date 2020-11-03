@@ -1,0 +1,46 @@
+@use "remove-default";
+@import "colors";
+
+// Website layout
+.grid-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 12% 1fr 12%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . .";
+}
+
+// Left column - Navbar
+@import "left-col";
+
+// Middle column - Main
+@import "middle-col";
+
+// Right column - Alerts
+@import "right-col";
+
+// Generic css class
+.col {
+  position: relative;
+  li {
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-top: 1px #999 solid;
+  }
+}
+.title {
+  font-size: 24px;
+  padding: 1rem 0 1rem 0;
+}
+.subtitle {
+  font-style: italic;
+  padding: 0.8rem 0 0.8rem 0;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.text-center { text-align: center; }

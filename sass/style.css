@@ -1,3 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.grid-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 12% 1fr 12%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+}
+
+.navbar {
+  background-color: #eee;
+}
+
+.main {
+  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem 1rem 2rem;
+}
+.main footer {
+  background-color: #eee;
+}
+.main footer ul {
+  display: flex;
+}
+.main footer ul li {
+  padding: 1rem;
+}
+
+.alerts {
+  background-color: #eee;
+}
+.alerts li .subtitle {
+  padding-top: 0;
+}
+
+.col {
+  position: relative;
+}
+.col li {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border-top: 1px #999 solid;
+}
+
+.title {
+  font-size: 24px;
+  padding: 1rem 0 1rem 0;
+}
+
+.subtitle {
+  font-style: italic;
+  padding: 0.8rem 0 0.8rem 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.text-center {
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
