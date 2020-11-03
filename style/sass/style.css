@@ -24,6 +24,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
+@font-face {
+  font-family: "Titillium";
+  src: url("../font/TitilliumWeb-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../font/TitilliumWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../font/TitilliumWeb-Regular.otf") format("opentype"), url("../font/TitilliumWeb-Regular.ttf") format("truetype"), url("../font/TitilliumWeb-Regular.woff") format("woff"), url("../font/TitilliumWeb-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Titillium;
+}
+
 .grid-layout {
   height: 100vh;
   display: grid;
@@ -34,7 +47,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  background-color: #eee;
+  background-color: #212738;
+}
+.navbar li:hover {
+  background-color: #daf0ee;
+  transition: 0.2s;
 }
 
 .main {
@@ -44,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 2rem 1rem 2rem;
 }
 .main footer {
-  background-color: #eee;
+  background-color: #9db5b2;
 }
 .main footer ul {
   display: flex;
@@ -54,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .alerts {
-  background-color: #eee;
+  background-color: #daf0ee;
 }
 .alerts li .subtitle {
   padding-top: 0;

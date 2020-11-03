@@ -1,0 +1,11 @@
+//
+// Left column - Navbar
+//
+
+.navbar {
+  background-color: $color-primary;
+  li:hover {
+    background-color: $color-alt;
+    transition: 0.2s;
+  }
+}
