@@ -40,28 +40,37 @@ body {
 .grid-layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: 12% 1fr 12%;
+  grid-template-columns: 12% 76% 12%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: ". . .";
 }
+@media screen and (max-width: 599px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
 
 .navbar {
-  background-color: #212738;
+  background-color: #1A1A1A;
+  color: #EEEEEE;
+}
+.navbar li {
+  border-top: 1px #999 solid;
 }
 .navbar li:hover {
-  background-color: #daf0ee;
+  background-color: #3A3A3A;
   transition: 0.2s;
 }
 
 .main {
-  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem 1rem 2rem;
 }
 .main footer {
-  background-color: #9db5b2;
+  background-color: #CCCCCC;
 }
 .main footer ul {
   display: flex;
@@ -71,7 +80,11 @@ body {
 }
 
 .alerts {
-  background-color: #daf0ee;
+  background-color: #1A1A1A;
+  color: #EEEEEE;
+}
+.alerts li {
+  border-top: 1px #999 solid;
 }
 .alerts li .subtitle {
   padding-top: 0;
@@ -82,7 +95,6 @@ body {
 }
 .col li {
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-  border-top: 1px #999 solid;
 }
 
 .title {

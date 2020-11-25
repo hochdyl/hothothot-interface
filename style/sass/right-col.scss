@@ -3,6 +3,10 @@
 //
 
 .alerts {
-  background-color: $color-alt;
-  li .subtitle { padding-top: 0; }
+  background-color: $color-primary;
+  color: #EEEEEE;
+  li {
+    border-top: 1px #999 solid;
+    .subtitle { padding-top: 0; }
+  }
 }
