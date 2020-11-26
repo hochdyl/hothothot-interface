@@ -10,4 +10,7 @@
     background-color: $color-alt;
     transition: 0.2s;
   }
+  @include mobile-only {
+    display: none;
+  }
 }

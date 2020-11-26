@@ -14,7 +14,11 @@
   font-style: normal;
 }
 
-body { font-family: Titillium; }
+body {
+  font-family: Titillium;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
 // Website layout
 .grid-layout {
@@ -25,11 +29,15 @@ body { font-family: Titillium; }
   gap: 0px 0px;
   grid-template-areas:
     ". . .";
-  @media screen and (max-width: 599px) {
-      grid-template-columns: 1fr;
+  @include mobile-only {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    ".";
   }
 }
-
 
 // Left column - Navbar
 @import "left-col";
