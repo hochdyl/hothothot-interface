@@ -40,28 +40,29 @@ body {
 .grid-layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: 12% 1fr 12%;
+  grid-template-columns: 12% 76% 12%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: ". . .";
 }
 
 .navbar {
-  background-color: #212738;
+  background-color: #1A1A1A;
+  color: #EEEEEE;
 }
 .navbar li:hover {
-  background-color: #daf0ee;
+  background-color: #DAF0EE;
   transition: 0.2s;
 }
 
 .main {
-  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.3), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem 1rem 2rem;
 }
 .main footer {
-  background-color: #9db5b2;
+  background-color: #5D737E;
 }
 .main footer ul {
   display: flex;
@@ -71,7 +72,8 @@ body {
 }
 
 .alerts {
-  background-color: #daf0ee;
+  background-color: #1A1A1A;
+  color: #EEEEEE;
 }
 .alerts li .subtitle {
   padding-top: 0;
