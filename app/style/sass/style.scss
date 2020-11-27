@@ -5,9 +5,11 @@
 
 body {
   font-family: Titillium;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  transition: 0.2s;
+  background-color: #F5F5F5;
 }
 
 // Website layout
@@ -28,11 +30,8 @@ body {
 @import "main";
 
 // Generic css class
-.title { font-size: 1.6em; }
-.col {
-  position: relative;
-  li { padding: 0.5em 0.8em 0.5em 0.8em; }
-}
+.title { font-size: 24px; }
+.col { position: relative; }
 .footer {
   position: absolute;
   bottom: 0;

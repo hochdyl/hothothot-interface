@@ -3,36 +3,48 @@
 //
 
 .main {
-  -webkit-box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
-  box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  .graphic {
-    width: calc(75% - 2em * 2);
-    padding: 1em 2em 1em 2em;
+  height: calc(100vh - 30px * 2);
+  width: calc(100vw - 15% - 30px * 2);
+  padding: 30px;
+  .card {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+    -moz-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+    box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+  }
+  .content {
+    width: calc(70% - 30px * 4);
+    height: calc(100vh - 30px * 2);
+    .graphic { height: calc(80vh - 30px * 4); }
+    .sensors {
+      height: calc(20vh - 30px * 3);
+      margin-top: 30px;
+    }
   }
   .alerts {
     @mixin alerts-color($color) {
-      border-left: 0.4rem $color solid;
+      border-left: 6px $color solid;
       transition: 0.2s;
-      &:hover { border-left: 0.7rem $color solid; }
+      &:hover { border-left: 10px $color solid; }
     }
-    width: 25%;
-    padding: 1em 0 0 0;
-    section {
-      max-height: 80vh;
+    width: 30%;
+    height: calc(100vh - 30px * 4);
+    margin-left: 30px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    header { padding-bottom: 30px }
+    ul {
+      max-height: calc(100% - 8px * 2 - 30px);
       overflow-y: auto;
-      border-top: 1px $secondary solid;
-      border-bottom: 1px $secondary solid;
-    }
-    li {
-      padding: 1em;
-      .subtitle { padding-top: 0; }
-      &:hover {
-        background-color: $secondary;
-        transition: 0.2s;
+      li {
+        padding: 5px 0 5px 30px;
+        .subtitle { padding-top: 0; }
+        &:hover { background-color: $secondary; }
       }
     }
     .alert-red { @include alerts-color(#B00000); }
@@ -40,12 +52,5 @@
     .alert-cyan { @include alerts-color(#33B3B3); }
     .alert-blue { @include alerts-color(#0070B0); }
     .alert-grey { @include alerts-color(#A0A0A0); }
-  };
-  footer {
-    background-color: $secondary;
-    ul {
-      display: flex;
-      li { padding: 1rem; }
-    }
   }
 }

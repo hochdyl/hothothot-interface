@@ -3,14 +3,22 @@
 //
 
 .navbar {
-  background-color: $primary;
+  background: linear-gradient(220deg, $primary,#111111);
   color: #EEEEEE;
-  header { padding: 1rem 0 1rem 0; }
-  li {
-    border-top: 1px #999 solid;
-    &:hover {
-      background-color: $alt;
-      transition: 0.2s;
+  header { padding: 30px 0; }
+  nav {
+    li { padding: 10px 10px 10px 40px; }
+    .sensors {
+      position: relative;
+      &::before {
+        display: inline-block;
+        content: '';
+        background-image: url('../../img/view_list-black-18dp.svg');
+        background-size: 25px 25px;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+      }
     }
   }
 }
