@@ -3,10 +3,12 @@
 //
 
 .main {
-  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem 1rem 2rem;
+  .graphic { width: 75% };
+  .alerts { width: 25% };
   footer {
     background-color: $color-secondary;
     ul {

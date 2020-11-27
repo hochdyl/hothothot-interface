@@ -42,10 +42,10 @@ body {
 .grid-layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: 12% 76% 12%;
+  grid-template-columns: 15% 85%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas: ". . .";
+  grid-template-areas: ". .";
 }
 @media screen and (max-width: 576px) {
   .grid-layout {
@@ -75,10 +75,16 @@ body {
 }
 
 .main {
-  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5), inset -12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem 1rem 2rem;
+}
+.main .graphic {
+  width: 75%;
+}
+.main .alerts {
+  width: 25%;
 }
 .main footer {
   background-color: #CCCCCC;

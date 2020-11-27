@@ -27,7 +27,7 @@
         </section>
 
         <main class="main col">
-            <section>
+            <section class="graphic">
                 <h1 class="title">Le nom du capteur</h1>
                 <label for="capteurs">Capteurs</label>
                 <select id="capteurs">
@@ -42,6 +42,40 @@
                     <canvas id="myChart"></canvas>
                 </section>
             </section>
+
+            <section class="alerts">
+                <header class="text-center">
+                    <h1 class="title">Alertes (6)</h1>
+                </header>
+                <section>
+                    <ul>
+                        <li>
+                            <h2 class="subtitle">Intérieur</h2>
+                            <h3>Le 29/09/2020 à 13:45</h3>
+                        </li>
+                        <li>
+                            <h2 class="subtitle">Exterieur</h2>
+                            <h3>Le 29/09/2020 à 11:35</h3>
+                        </li>
+                        <li>
+                            <h2 class="subtitle">Intérieur</h2>
+                            <h3>Le 29/09/2020 à 08:21</h3>
+                        </li>
+                        <li>
+                            <h2 class="subtitle">Capteur fictif 2</h2>
+                            <h3>Le 29/09/2020 à 06:00</h3>
+                        </li>
+                        <li>
+                            <h2 class="subtitle">Capteur fictif 1</h2>
+                            <h3>Le 29/09/2020 à 04:00</h3>
+                        </li>
+                        <li>
+                            <h2 class="subtitle">Intérieur</h2>
+                            <h3>Le 29/09/2020 à 03:55</h3>
+                        </li>
+                    </ul>
+                </section>
+            </section>
             <footer class="footer">
                 <ul>
                     <a href="#"><li>Capteur 1</li></a>
@@ -51,42 +85,7 @@
                 </ul>
             </footer>
         </main>
-
-        <section class="alerts col">
-            <header class="text-center">
-                <h1 class="title">Alertes (6)</h1>
-            </header>
-            <section>
-                <ul>
-                    <li>
-                        <h2 class="subtitle">Intérieur</h2>
-                        <h3>Le 29/09/2020 à 13:45</h3>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Exterieur</h2>
-                        <h3>Le 29/09/2020 à 11:35</h3>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Intérieur</h2>
-                        <h3>Le 29/09/2020 à 08:21</h3>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Capteur fictif 2</h2>
-                        <h3>Le 29/09/2020 à 06:00</h3>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Capteur fictif 1</h2>
-                        <h3>Le 29/09/2020 à 04:00</h3>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Intérieur</h2>
-                        <h3>Le 29/09/2020 à 03:55</h3>
-                    </li>
-                </ul>
-            </section>
-        </section>
     </section>
-
 </body>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');

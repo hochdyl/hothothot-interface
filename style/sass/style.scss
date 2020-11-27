@@ -24,11 +24,11 @@ body {
 .grid-layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: 12% 76% 12%;
+  grid-template-columns: 15% 85%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    ". . .";
+    ". .";
   @include mobile-only {
     height: 100vh;
     display: grid;
