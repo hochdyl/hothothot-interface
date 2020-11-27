@@ -1,0 +1,9 @@
+//
+// Website breakpoints
+//
+
+@mixin responsive-breakpoint($trigger) {
+  @media screen and (max-width: $trigger) {
+    @content;
+  }
+}

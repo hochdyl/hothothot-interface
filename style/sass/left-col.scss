@@ -5,8 +5,11 @@
 .navbar {
   background-color: $color-primary;
   color: #EEEEEE;
-  li:hover {
-    background-color: $color-alt;
-    transition: 0.2s;
+  li {
+    border-top: 1px #999 solid;
+    &:hover {
+      background-color: $color-alt;
+      transition: 0.2s;
+    }
   }
 }
