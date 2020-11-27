@@ -7,8 +7,33 @@
   -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem 1rem 2rem;
-  .graphic { width: 75% };
-  .alerts { width: 25% };
+  .graphic { width: 75%; }
+  .alerts {
+    @mixin alerts-color($color) {
+      border-left: 0.4rem $color solid;
+      transition: 0.2s;
+      &:hover { border-left: 0.7rem $color solid; }
+    }
+    width: 25%;
+    background-color: $color-primary;
+    color: #EEEEEE;
+    li {
+      border-top: 1px #999 solid;
+      .subtitle { padding-top: 0; }
+      &:hover {
+        background-color: $color-alt;
+        transition: 0.2s;
+      }
+    }
+    .alert-red { @include alerts-color(#B00000); }
+    .alert-yellow { @include alerts-color(#B19000); }
+    .alert-cyan { @include alerts-color(#33B3B3); }
+    .alert-blue { @include alerts-color(#0070B0); }
+    .alert-grey { @include alerts-color(#A0A0A0); }
+    @include responsive-breakpoint(1150px) {
+      li { font-size: 30px; }
+    }
+  };
   footer {
     background-color: $color-secondary;
     ul {

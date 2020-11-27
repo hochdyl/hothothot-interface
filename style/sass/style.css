@@ -47,15 +47,6 @@ body {
   gap: 0px 0px;
   grid-template-areas: ". .";
 }
-@media screen and (max-width: 576px) {
-  .grid-layout {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ".";
-  }
-}
 
 .navbar {
   background-color: #1A1A1A;
@@ -67,11 +58,6 @@ body {
 .navbar li:hover {
   background-color: #3A3A3A;
   transition: 0.2s;
-}
-@media screen and (max-width: 576px) {
-  .navbar {
-    display: none;
-  }
 }
 
 .main {
@@ -85,6 +71,58 @@ body {
 }
 .main .alerts {
   width: 25%;
+  background-color: #1A1A1A;
+  color: #EEEEEE;
+}
+.main .alerts li {
+  border-top: 1px #999 solid;
+}
+.main .alerts li .subtitle {
+  padding-top: 0;
+}
+.main .alerts li:hover {
+  background-color: #3A3A3A;
+  transition: 0.2s;
+}
+.main .alerts .alert-red {
+  border-left: 0.4rem #B00000 solid;
+  transition: 0.2s;
+}
+.main .alerts .alert-red:hover {
+  border-left: 0.7rem #B00000 solid;
+}
+.main .alerts .alert-yellow {
+  border-left: 0.4rem #B19000 solid;
+  transition: 0.2s;
+}
+.main .alerts .alert-yellow:hover {
+  border-left: 0.7rem #B19000 solid;
+}
+.main .alerts .alert-cyan {
+  border-left: 0.4rem #33B3B3 solid;
+  transition: 0.2s;
+}
+.main .alerts .alert-cyan:hover {
+  border-left: 0.7rem #33B3B3 solid;
+}
+.main .alerts .alert-blue {
+  border-left: 0.4rem #0070B0 solid;
+  transition: 0.2s;
+}
+.main .alerts .alert-blue:hover {
+  border-left: 0.7rem #0070B0 solid;
+}
+.main .alerts .alert-grey {
+  border-left: 0.4rem #A0A0A0 solid;
+  transition: 0.2s;
+}
+.main .alerts .alert-grey:hover {
+  border-left: 0.7rem #A0A0A0 solid;
+}
+@media screen and (max-width: 1150px) {
+  .main .alerts li {
+    font-size: 30px;
+  }
 }
 .main footer {
   background-color: #CCCCCC;
@@ -94,22 +132,6 @@ body {
 }
 .main footer ul li {
   padding: 1rem;
-}
-
-.alerts {
-  background-color: #1A1A1A;
-  color: #EEEEEE;
-}
-.alerts li {
-  border-top: 1px #999 solid;
-}
-.alerts li .subtitle {
-  padding-top: 0;
-}
-@media screen and (max-width: 576px) {
-  .alerts {
-    display: none;
-  }
 }
 
 .col {

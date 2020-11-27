@@ -2,26 +2,8 @@
 // Website breakpoints
 //
 
-@mixin mobile-only {
-  @media screen and (max-width: 576px) {
-    @content;
-  }
-}
-
-@mixin tablet-only {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin desktop-only {
-  @media screen and (max-width: 992px) {
-    @content;
-  }
-}
-
-@mixin large-desktop-only {
-  @media screen and (max-width: 1200px) {
+@mixin responsive-breakpoint($trigger) {
+  @media screen and (max-width: $trigger) {
     @content;
   }
 }
