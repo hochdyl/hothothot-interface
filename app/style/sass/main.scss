@@ -3,11 +3,16 @@
 //
 
 .main {
-  -webkit-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 12px 0px 12px -12px rgba(0, 0, 0, 0.5);
-  padding: 1rem 2rem 1rem 2rem;
-  .graphic { width: 75%; }
+  -webkit-box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
+  box-shadow: inset 1em 0em 1em -1em rgba(0, 0, 0, 1);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  .graphic {
+    width: calc(75% - 2em * 2);
+    padding: 1em 2em 1em 2em;
+  }
   .alerts {
     @mixin alerts-color($color) {
       border-left: 0.4rem $color solid;
@@ -15,13 +20,18 @@
       &:hover { border-left: 0.7rem $color solid; }
     }
     width: 25%;
-    background-color: $color-primary;
-    color: #EEEEEE;
+    padding: 1em 0 0 0;
+    section {
+      max-height: 80vh;
+      overflow-y: auto;
+      border-top: 1px $secondary solid;
+      border-bottom: 1px $secondary solid;
+    }
     li {
-      border-top: 1px #999 solid;
+      padding: 1em;
       .subtitle { padding-top: 0; }
       &:hover {
-        background-color: $color-alt;
+        background-color: $secondary;
         transition: 0.2s;
       }
     }
@@ -30,12 +40,9 @@
     .alert-cyan { @include alerts-color(#33B3B3); }
     .alert-blue { @include alerts-color(#0070B0); }
     .alert-grey { @include alerts-color(#A0A0A0); }
-    @include responsive-breakpoint(1150px) {
-      li { font-size: 30px; }
-    }
   };
   footer {
-    background-color: $color-secondary;
+    background-color: $secondary;
     ul {
       display: flex;
       li { padding: 1rem; }

@@ -6,7 +6,8 @@
 body {
   font-family: Titillium;
   max-width: 100vw;
-  overflow-x: hidden;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 // Website layout
@@ -21,23 +22,16 @@ body {
 }
 
 // Left column - Navbar
-@import "left-col";
+@import "nav";
 
 // Middle column - Main
-@import "middle-col";
+@import "main";
 
 // Generic css class
+.title { font-size: 1.6em; }
 .col {
   position: relative;
-  li { padding: 0.5rem 0.8rem 0.5rem 0.8rem; }
-}
-.title {
-  font-size: 24px;
-  padding: 1rem 0 1rem 0;
-}
-.subtitle {
-  font-style: italic;
-  padding: 0.8rem 0 0.8rem 0;
+  li { padding: 0.5em 0.8em 0.5em 0.8em; }
 }
 .footer {
   position: absolute;

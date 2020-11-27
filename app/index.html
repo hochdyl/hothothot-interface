@@ -9,9 +9,9 @@
 <body>
 
     <section class="grid-layout">
-        <section class="navbar col text-center">
-            <header>
-                <a href="#"><h1 class="title">HotHotHot!</h1></a>
+        <section class="navbar col">
+            <header class="title text-center">
+                <a href="#"><h1>HotHotHot!</h1></a>
             </header>
             <nav>
                 <ul>
@@ -26,7 +26,7 @@
             </footer>
         </section>
 
-        <main class="main col">
+        <main class="main">
             <section class="graphic">
                 <h1 class="title">Le nom du capteur</h1>
                 <label for="capteurs">Capteurs</label>
@@ -38,55 +38,61 @@
                 </select>
                 <label for="date">La date</label>
                 <input type="date" id="date">
-                <section>
-                    <canvas id="myChart"></canvas>
-                </section>
-            </section>
-
-            <section class="alerts">
-                <header class="text-center">
-                    <h1 class="title">Alertes (6)</h1>
-                </header>
-                <section>
-                    <ul>
-                        <li>
-                            <h2 class="subtitle">Intérieur</h2>
-                            <h3>Le 29/09/2020 à 13:45</h3>
-                        </li>
-                        <li>
-                            <h2 class="subtitle">Exterieur</h2>
-                            <h3>Le 29/09/2020 à 11:35</h3>
-                        </li>
-                        <li>
-                            <h2 class="subtitle">Intérieur</h2>
-                            <h3>Le 29/09/2020 à 08:21</h3>
-                        </li>
-                        <li>
-                            <h2 class="subtitle">Capteur fictif 2</h2>
-                            <h3>Le 29/09/2020 à 06:00</h3>
-                        </li>
-                        <li>
-                            <h2 class="subtitle">Capteur fictif 1</h2>
-                            <h3>Le 29/09/2020 à 04:00</h3>
-                        </li>
-                        <li>
-                            <h2 class="subtitle">Intérieur</h2>
-                            <h3>Le 29/09/2020 à 03:55</h3>
-                        </li>
-                    </ul>
-                </section>
-            </section>
-            <footer class="footer">
+                <canvas id="myChart"></canvas>
                 <ul>
                     <a href="#"><li>Capteur 1</li></a>
                     <a href="#"><li>Capteur 2</li></a>
                     <a href="#"><li>Capteur 3</li></a>
                     <a href="#"><li>Capteur 4</li></a>
                 </ul>
-            </footer>
+            </section>
+
+            <section class="alerts col">
+                <header class="text-center">
+                    <h1 class="title">Alertes (6)</h1>
+                </header>
+                <section>
+                    <ul>
+                        <li class="alert-red">
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 13:45</h3>
+                        </li>
+                        <li class="alert-yellow">
+                            <h2>Exterieur</h2>
+                            <h3>Le 29/09/2020 à 11:35</h3>
+                        </li>
+                        <li class="alert-cyan">
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 08:21</h3>
+                        </li>
+                        <li class="alert-blue">
+                            <h2>Capteur fictif 2</h2>
+                            <h3>Le 29/09/2020 à 06:00</h3>
+                        </li>
+                        <li class="alert-grey">
+                            <h2>Capteur fictif 1</h2>
+                            <h3>Le 29/09/2020 à 04:00</h3>
+                        </li>
+                        <li>
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 03:55</h3>
+                        </li>
+                        <li>
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 03:55</h3>
+                        </li>
+                        <li>
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 03:55</h3>
+                        </li>
+                    </ul>
+                </section>
+            </section>
         </main>
     </section>
 </body>
+
+<script src="chart.js"></script>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
