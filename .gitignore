@@ -1,3 +1,8 @@
-#PhpStorm IDE files
+# PhpStorm IDE files
 .idea/
+
+# SCSS Compilation
 dart-sass/
+
+# Logs
+debug.log

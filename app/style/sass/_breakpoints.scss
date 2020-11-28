@@ -2,8 +2,18 @@
 // Website breakpoints
 //
 
-@mixin responsive-breakpoint($trigger) {
-  @media screen and (max-width: $trigger) {
+@mixin breakpoint-large {
+  @media screen and (max-width: 1350px) {
+    @content;
+  }
+}
+@mixin breakpoint-medium {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+@mixin breakpoint-small {
+  @media screen and (max-width: 800px) {
     @content;
   }
 }

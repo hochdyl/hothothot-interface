@@ -5,9 +5,8 @@
 .main {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
   height: calc(100vh - 30px * 2);
-  width: calc(100vw - 15% - 30px * 2);
+  width: calc(85vw - 30px * 2);
   padding: 30px;
   .card {
     padding: 30px;
@@ -17,14 +16,25 @@
     -moz-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
     box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
   }
-  .content {
-    width: calc(70% - 30px * 4);
-    height: calc(100vh - 30px * 2);
-    .graphic { height: calc(80vh - 30px * 4); }
-    .sensors {
-      height: calc(20vh - 30px * 3);
-      margin-top: 30px;
+  .sensors {
+    height: 80px;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    .card { padding: 20px; }
+    ul {
+      white-space:nowrap;
+      display: flex;
+      li {
+        margin-right: 10px;
+        &:hover { background-color: $secondary; }
+      }
     }
+  }
+  .graphic {
+    height: calc(100% - 80px - 30px * 3);
+    width: calc(70% - 30px * 2);
+    overflow: hidden;
   }
   .alerts {
     @mixin alerts-color($color) {
@@ -32,8 +42,8 @@
       transition: 0.2s;
       &:hover { border-left: 10px $color solid; }
     }
-    width: 30%;
-    height: calc(100vh - 30px * 4);
+    height: calc(100% - 80px - 30px * 3);
+    width: calc(30% - 30px * 3);
     margin-left: 30px;
     border-radius: 20px;
     background-color: #FFFFFF;
@@ -52,5 +62,9 @@
     .alert-cyan { @include alerts-color(#33B3B3); }
     .alert-blue { @include alerts-color(#0070B0); }
     .alert-grey { @include alerts-color(#A0A0A0); }
+
+    @include breakpoint-large {
+      display: none;
+    }
   }
 }

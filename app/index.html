@@ -27,30 +27,29 @@
         </section>
 
         <main class="main">
-            <section class="content">
-                <section class="graphic card">
-                    <h1 class="title">Le nom du capteur</h1>
-                    <label for="capteurs">Capteurs</label>
-                    <select id="capteurs">
-                        <option value="Capteur 1">Capteur 1</option>
-                        <option value="Capteur 2">Capteur 2</option>
-                        <option value="Capteur 3">Capteur 3</option>
-                        <option value="Capteur 4">Capteur 4</option>
-                    </select>
-                    <label for="date">La date</label>
-                    <input type="date" id="date">
-                    <canvas id="myChart"></canvas>
-                </section>
-                <section class="sensors card">
-                    <ul>
-                        <a href="#"><li>Capteur 1</li></a>
-                        <a href="#"><li>Capteur 2</li></a>
-                        <a href="#"><li>Capteur 3</li></a>
-                    </ul>
-                </section>
+            <header class="sensors">
+                <ul>
+                    <a href="#"><li class="card">Capteur test | 20°</li></a>
+                    <a href="#"><li class="card">Capteur interieur | 20°</li></a>
+                    <a href="#"><li class="card">Capteur exterieur | 20°</li></a>
+                    <a href="#"><li class="card">Nouveau capteur ! | 20°</li></a>
+                </ul>
+            </header>
+            <section class="graphic card">
+                <h1 class="title">Le nom du capteur</h1>
+                <label for="capteurs">Capteurs</label>
+                <select id="capteurs">
+                    <option value="Capteur 1">Capteur 1</option>
+                    <option value="Capteur 2">Capteur 2</option>
+                    <option value="Capteur 3">Capteur 3</option>
+                    <option value="Capteur 4">Capteur 4</option>
+                </select>
+                <label for="date">La date</label>
+                <input type="date" id="date">
+                <canvas id="myChart"></canvas>
             </section>
 
-            <section class="alerts col card">
+            <section class="alerts card">
                 <header class="text-center">
                     <h1 class="title">Alertes (6)</h1>
                 </header>
