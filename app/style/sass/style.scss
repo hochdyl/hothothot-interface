@@ -89,3 +89,11 @@ body {
   @include breakpoint-mobile { padding: 20px; }
 }
 .disable { pointer-events: none; }
+.no-highlight {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
