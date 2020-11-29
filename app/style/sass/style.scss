@@ -36,17 +36,15 @@ body {
 .grid-layout {
   display: grid;
   grid-template-columns: 15vw 85vw;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
+  grid-template-rows: 100vh;
   grid-template-areas:
     ". .";
   @include breakpoint-large {
-    height: auto;
     width: 100vw;
-    display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 1fr;
+    grid-template-rows: 55px calc(100vh - 55px);
     grid-template-areas:
+    "."
     ".";
   }
   @include breakpoint-large {
@@ -65,21 +63,11 @@ body {
 .title { font-size: 24px; }
 .mobile-title {
   display: none;
-  @include breakpoint-mobile {
-    display: block;
-    height: 50px;
-    width: 100vw;
-    line-height: 50px;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: $primary;
-  }
+  height: 50px;
+  width: 100vw;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: $primary;
+  @include breakpoint-mobile { display: block; }
 }
-.col { position: relative; }
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.text-center { text-align: center; }

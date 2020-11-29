@@ -1,22 +1,20 @@
-//
-// Middle column - Main
-//
+// Website main content
 
-.main {
+main {
   display: flex;
   flex-flow: row wrap;
   height: calc(100vh - 30px * 2);
   width: calc(85vw - 30px * 2);
   padding: 30px;
   @include breakpoint-large {
-    margin-top: 55px;
-    height: calc(100vh - 30px * 2 - 25px - 15px * 2);
+    height: calc(100vh - 30px * 2 - 55px);
     width: calc(100vw - 30px * 2);
+    margin-top: 55px;
     overflow-y: auto;
   }
   @include breakpoint-mobile {
-    width: calc(100vw - 10px * 2);
     height: calc(100vh - 30px * 2 - 55px - 50px);
+    width: calc(100vw - 10px * 2);
     padding: 30px 10px;
     margin: 0 0 55px 0;
   }
@@ -32,19 +30,19 @@
   }
 
   .sensors {
-    height: 80px;
+    height: 50px;
     width: 100%;
-    overflow-x: auto;
     margin-bottom: 30px;
-    @include breakpoint-mobile {
-      margin: 0;
-    }
+    overflow-x: auto;
+    @include breakpoint-mobile { margin: 0; }
 
-    .card { padding: 20px; }
+    .card { padding: 10px; }
     ul {
       white-space:nowrap;
       display: flex;
       li {
+        height: 20px;
+        line-height: 20px;
         margin-right: 10px;
         &:hover { background-color: $secondary; }
       }
@@ -52,19 +50,13 @@
   }
 
   .graphic {
-    height: calc(100% - 80px - 30px * 3);
+    height: calc(100% - 80px - 30px * 2);
     width: calc(70% - 30px * 2);
     overflow: hidden;
-    @include breakpoint-large { width: calc(70% - 30px * 2); }
+    @include breakpoint-large { height: calc(100% - 80px - 30px * 2 - 55px); }
     @include breakpoint-medium { width: calc(60% - 30px * 2); }
-    @include breakpoint-small {
-      height: auto;
-      width: calc(100% - 30px * 2);
-    }
-    @include breakpoint-mobile {
-      width: 100%;
-      margin-top: 30px;
-    }
+    @include breakpoint-small { height: auto; width: 100%; }
+    @include breakpoint-mobile { margin-top: 30px; }
   }
 
   .alerts {
@@ -73,33 +65,26 @@
       transition: 0.2s;
       &:hover { border-left: 10px $color solid; }
     }
-    height: calc(100% - 80px - 30px * 3);
-    width: calc(30% - 30px * 3);
+    height: calc(100% - 80px - 30px * 2);
+    width: calc(30% - 30px * 2 - 30px);
     margin-left: 30px;
     border-radius: 20px;
     background-color: #FFFFFF;
-    @include breakpoint-large { width: calc(30% - 30px * 3); }
+    @include breakpoint-large { height: calc(100% - 80px - 30px * 2 - 55px); }
     @include breakpoint-medium { width: calc(40% - 30px * 3); }
-    @include breakpoint-small {
-      height: calc(50% - 80px - 30px * 3);
-      width: calc(100% - 30px * 2);
-      margin: 30px 0 0 0;
-    }
-    @include breakpoint-mobile {
-      height: 50%;
-      width: 100%;
-    }
+    @include breakpoint-small { height: 50%; width: 100%; margin: 30px 0 0 0; }
     header {
       padding-bottom: 30px;
       text-align: center;
     }
     ul {
       max-height: calc(100% - 8px * 2 - 30px);
-      @include breakpoint-mobile { max-height: calc(100% - 13px * 2 - 30px); }
       overflow-y: auto;
+      @include breakpoint-mobile { max-height: calc(100% - 15px * 2 - 30px); }
       li {
-        padding: 5px 0 5px 30px;
-        .subtitle { padding-top: 0; }
+        padding-left: 30px;
+        h2 { padding-top: 5px; }
+        h3 { padding-bottom: 5px; }
         &:hover { background-color: $secondary; }
       }
     }
@@ -108,5 +93,15 @@
     .alert-cyan { @include alerts-color(#33B3B3); }
     .alert-blue { @include alerts-color(#0070B0); }
     .alert-grey { @include alerts-color(#A0A0A0); }
+  }
+
+  footer {
+    display: none;
+    height: 25px;
+    width: 100%;
+    line-height: 25px;
+    margin-top: 30px;
+    text-align: center;
+    @include breakpoint-large { display: block }
   }
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>HotHotHot</title>
+    <link href="style/sass/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../libraries/Chart.js-2.9.4/dist/Chart.min.js"></script>
+</head>
+<body>
+
+    <section class="grid-layout">
+        <section class="navbar">
+            <header class="title">
+                <a href="#"><h1>HOTHOTHOT!</h1></a>
+            </header>
+            <nav>
+                <ul>
+                    <a href="#"><li class="sensors">Capteurs</li></a>
+                    <a href="#"><li class="alerts">Alertes</li></a>
+                    <a href="#"><li class="account">Compte</li></a>
+                    <a href="#"><li class="logout">Deconnexion</li></a>
+                </ul>
+            </nav>
+            <footer>
+                <p>Pre-release Mockup</p>
+            </footer>
+        </section>
+
+        <nav class="navbar-top">
+            <a href="#"><h1>HOTHOTHOT!</h1></a>
+            <ul>
+                <a href="#"><li>Capteurs</li></a>
+                <a href="#"><li>Alertes</li></a>
+                <a href="#"><li>Compte</li></a>
+                <a href="#"><li>Deconnexion</li></a>
+            </ul>
+        </nav>
+
+        <h1 class="title mobile-title">HOTHOTHOT!</h1>
+
+        <main>
+            <header class="sensors">
+                <ul>
+                    <a href="#"><li class="card">Intérieur | 15°</li></a>
+                    <a href="#"><li class="card">Exterieur | 12°</li></a>
+                    <a href="#"><li class="card">Test | -10°</li></a>
+                    <a href="#"><li class="card">Nouveau capteur | 4°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 34°</li></a>
+                </ul>
+            </header>
+            <section class="graphic card">
+                <h1 class="title">Le nom du capteur</h1>
+                <label for="capteurs">Capteurs</label>
+                <select id="capteurs">
+                    <option value="Capteur 1">Capteur 1</option>
+                    <option value="Capteur 2">Capteur 2</option>
+                    <option value="Capteur 3">Capteur 3</option>
+                    <option value="Capteur 4">Capteur 4</option>
+                </select>
+                <label for="date">La date</label>
+                <input type="date" id="date">
+                <canvas id="chart"></canvas>
+                <p id="test">LALERTE ICI !!</p>
+            </section>
+
+            <section class="alerts card">
+                <header>
+                    <h1 class="title">Alertes (5)</h1>
+                </header>
+                <ul>
+                    <a data-alert="1" href="#">
+                        <li class="alert-red">
+                            <h2>Intérieur</h2>
+                            <h3>Le 29/09/2020 à 13:45</h3>
+                        </li>
+                    </a>
+                    <a data-alert="2" href="#">
+                        <li class="alert-yellow">
+                            <h2>Exterieur</h2>
+                            <h3>Le 29/09/2020 à 11:35</h3>
+                        </li>
+                    </a>
+                    <a data-alert="3" href="#">
+                        <li class="alert-cyan">
+                            <h2>Test</h2>
+                            <h3>Le 29/09/2020 à 08:21</h3>
+                        </li>
+                    </a>
+                    <a data-alert="4" href="#">
+                        <li class="alert-blue">
+                            <h2>Nouveau capteur</h2>
+                            <h3>Le 29/09/2020 à 06:00</h3>
+                        </li>
+                    </a>
+                    <a data-alert="5" href="#">
+                        <li class="alert-grey">
+                            <h2>Capteur additionnel</h2>
+                            <h3>Le 29/09/2020 à 05:50</h3>
+                        </li>
+                    </a>
+                </ul>
+            </section>
+            <footer>
+                <p>Pre-release Mockup</p>
+            </footer>
+        </main>
+
+        <nav class="navbar-mobile">
+            <ul>
+                <a href="#"><li class="icon-sensors">Capteurs</li></a>
+                <a href="#"><li class="icon-alerts">Alertes</li></a>
+                <a href="#"><li class="icon-account">Compte</li></a>
+                <a href="#"><li class="icon-logout">Deconnexion</li></a>
+            </ul>
+        </nav>
+
+    </section>
+</body>
+<script src="js/main.js"></script>
+<script src="js/chart.js"></script>
+</html>
