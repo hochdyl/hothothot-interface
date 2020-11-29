@@ -8,12 +8,17 @@
   }
 }
 @mixin breakpoint-medium {
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1150px) {
     @content;
   }
 }
 @mixin breakpoint-small {
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin breakpoint-mobile {
+  @media screen and (max-width: 550px) {
     @content;
   }
 }

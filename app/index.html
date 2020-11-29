@@ -9,8 +9,8 @@
 <body>
 
     <section class="grid-layout">
-        <section class="navbar col">
-            <header class="title text-center">
+        <section class="navbar">
+            <header class="title">
                 <a href="#"><h1>HOTHOTHOT!</h1></a>
             </header>
             <nav>
@@ -21,10 +21,22 @@
                     <a href="#"><li class="logout">Deconnexion</li></a>
                 </ul>
             </nav>
-            <footer class="footer text-center">
+            <footer>
                 <p>Pre-release Mockup</p>
             </footer>
         </section>
+
+        <nav class="navbar-top">
+            <a href="#"><h1>HOTHOTHOT!</h1></a>
+            <ul>
+                <a href="#"><li>Capteurs</li></a>
+                <a href="#"><li>Alertes</li></a>
+                <a href="#"><li>Compte</li></a>
+                <a href="#"><li>Deconnexion</li></a>
+            </ul>
+        </nav>
+
+        <h1 class="title mobile-title">HOTHOTHOT!</h1>
 
         <main class="main">
             <header class="sensors">
@@ -33,6 +45,11 @@
                     <a href="#"><li class="card">Capteur interieur | 20°</li></a>
                     <a href="#"><li class="card">Capteur exterieur | 20°</li></a>
                     <a href="#"><li class="card">Nouveau capteur ! | 20°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 20°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 20°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 20°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 20°</li></a>
+                    <a href="#"><li class="card">Capteur additionnel | 20°</li></a>
                 </ul>
             </header>
             <section class="graphic card">
@@ -46,11 +63,11 @@
                 </select>
                 <label for="date">La date</label>
                 <input type="date" id="date">
-                <canvas id="myChart"></canvas>
+                <canvas id="chart"></canvas>
             </section>
 
             <section class="alerts card">
-                <header class="text-center">
+                <header>
                     <h1 class="title">Alertes (6)</h1>
                 </header>
                 <ul>
@@ -105,28 +122,17 @@
                 </ul>
             </section>
         </main>
+
+        <nav class="navbar-mobile">
+            <ul>
+                <a href="#"><li class="icon-sensors">Capteurs</li></a>
+                <a href="#"><li class="icon-alerts">Alertes</li></a>
+                <a href="#"><li class="icon-account">Compte</li></a>
+                <a href="#"><li class="icon-logout">Deconnexion</li></a>
+            </ul>
+        </nav>
+
     </section>
 </body>
-
-<script src="chart.js"></script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'My First dataset',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45]
-            }],
-        },
-
-        // Configuration options go here
-        options: {}
-    });
-</script>
+<script src="js/chart.js"></script>
 </html>

@@ -8,6 +8,19 @@
   height: calc(100vh - 30px * 2);
   width: calc(85vw - 30px * 2);
   padding: 30px;
+  @include breakpoint-large {
+    margin-top: 55px;
+    height: calc(100vh - 30px * 2 - 25px - 15px * 2);
+    width: calc(100vw - 30px * 2);
+    overflow-y: auto;
+  }
+  @include breakpoint-mobile {
+    width: calc(100vw - 10px * 2);
+    height: calc(100vh - 30px * 2 - 55px - 50px);
+    padding: 30px 10px;
+    margin: 0 0 55px 0;
+  }
+
   .card {
     padding: 30px;
     border-radius: 20px;
@@ -15,12 +28,18 @@
     -webkit-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
     -moz-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
     box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+    @include breakpoint-mobile { padding: 20px; }
   }
+
   .sensors {
     height: 80px;
     width: 100%;
     overflow-x: auto;
     margin-bottom: 30px;
+    @include breakpoint-mobile {
+      margin: 0;
+    }
+
     .card { padding: 20px; }
     ul {
       white-space:nowrap;
@@ -31,11 +50,23 @@
       }
     }
   }
+
   .graphic {
     height: calc(100% - 80px - 30px * 3);
     width: calc(70% - 30px * 2);
     overflow: hidden;
+    @include breakpoint-large { width: calc(70% - 30px * 2); }
+    @include breakpoint-medium { width: calc(60% - 30px * 2); }
+    @include breakpoint-small {
+      height: auto;
+      width: calc(100% - 30px * 2);
+    }
+    @include breakpoint-mobile {
+      width: 100%;
+      margin-top: 30px;
+    }
   }
+
   .alerts {
     @mixin alerts-color($color) {
       border-left: 6px $color solid;
@@ -47,9 +78,24 @@
     margin-left: 30px;
     border-radius: 20px;
     background-color: #FFFFFF;
-    header { padding-bottom: 30px }
+    @include breakpoint-large { width: calc(30% - 30px * 3); }
+    @include breakpoint-medium { width: calc(40% - 30px * 3); }
+    @include breakpoint-small {
+      height: calc(50% - 80px - 30px * 3);
+      width: calc(100% - 30px * 2);
+      margin: 30px 0 0 0;
+    }
+    @include breakpoint-mobile {
+      height: 50%;
+      width: 100%;
+    }
+    header {
+      padding-bottom: 30px;
+      text-align: center;
+    }
     ul {
       max-height: calc(100% - 8px * 2 - 30px);
+      @include breakpoint-mobile { max-height: calc(100% - 13px * 2 - 30px); }
       overflow-y: auto;
       li {
         padding: 5px 0 5px 30px;
@@ -62,9 +108,5 @@
     .alert-cyan { @include alerts-color(#33B3B3); }
     .alert-blue { @include alerts-color(#0070B0); }
     .alert-grey { @include alerts-color(#A0A0A0); }
-
-    @include breakpoint-large {
-      display: none;
-    }
   }
 }
