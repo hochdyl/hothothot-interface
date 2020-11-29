@@ -31,6 +31,28 @@ function appelAjax(e) {
 }
 
 function updatePage(result) {
-    console.log('RESULT: ',result);
-    document.querySelector("#test").innerHTML = result.Title;
+    let popup = document.querySelector(".alerts-popup");
+    let page = document.querySelector(".grid-layout");
+    document.querySelector("#alertTemperature").innerHTML = result.Temperature;
+    document.querySelector("#alertSensor").innerHTML = result.Sensor;
+    document.querySelector("#alertDate").innerHTML = result.Date;
+    document.querySelector("#alertTime").innerHTML = result.Time;
+    document.querySelector("#alertTitle").innerHTML = result.Title;
+    page.classList.add("disable");
+    fadeIn(popup,"block");
 }
+
+(function() {
+    let popup = document.querySelector(".alerts-popup");
+    let page = document.querySelector(".grid-layout");
+    window.addEventListener("click", function(e) {
+        e.preventDefault();
+        if( page.classList.contains("disable") ) {
+            fadeOut(popup);
+            page.classList.remove("disable")
+        };
+        e.stopPropagation();
+    }, false);
+})();
+
+

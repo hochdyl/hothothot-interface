@@ -53,13 +53,21 @@ body {
   }
 }
 
-// Left column - Navbar
+// Website navbar
 @import "nav";
 
-// Middle column - Main
+// Website main content
 @import "main";
 
+// Alerts popup
+@import "popup";
+
 // Generic css class
+.alert-red { border-left: 6px $alert-red solid; }
+.alert-yellow { border-left: 6px $alert-yellow solid; }
+.alert-cyan { border-left: 6px $alert-cyan solid; }
+.alert-blue { border-left: 6px $alert-blue solid; }
+.alert-grey { border-left: 6px $alert-grey solid; }
 .title { font-size: 24px; }
 .mobile-title {
   display: none;
@@ -71,3 +79,13 @@ body {
   background-color: $primary;
   @include breakpoint-mobile { display: block; }
 }
+.card {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+  -moz-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+  box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
+  @include breakpoint-mobile { padding: 20px; }
+}
+.disable { pointer-events: none; }

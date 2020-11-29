@@ -2,36 +2,41 @@
   "1": {
     "Title": "Il fait très chaud !",
     "Temperature": "40",
-    "Sensor": "1",
+    "Sensor": "Inférieur",
     "Date": "29/09/2020",
-    "Time": "13:45"
+    "Time": "13:45",
+    "Color": "alert-red"
   },
   "2": {
     "Title": "Il fait chaud !",
     "Temperature": "32",
-    "Sensor": "2",
+    "Sensor": "Exterieur",
     "Date": "29/09/2020",
-    "Time": "11:35"
+    "Time": "11:35",
+    "Color": "alert-yellow"
   },
   "3": {
     "Title": "Il fait froid !",
     "Temperature": "-6",
-    "Sensor": "3",
+    "Sensor": "Test",
     "Date": "29/09/2020",
-    "Time": "08:21"
+    "Time": "08:21",
+    "Color": "alert-cyan"
   },
   "4": {
     "Title": "Il fait très froid !",
     "Temperature": "-21",
-    "Sensor": "4",
+    "Sensor": "Nouveau capteur",
     "Date": "29/09/2020",
-    "Time": "06:00"
+    "Time": "06:00",
+    "Color": "alert-blue"
   },
   "5": {
     "Title": "Alerte personnalisée",
     "Temperature": "10",
-    "Sensor": "5",
+    "Sensor": "Capteur additionnel",
     "Date": "29/09/2020",
-    "Time": "05:50"
+    "Time": "05:50",
+    "Color": "alert-grey"
   }
 }

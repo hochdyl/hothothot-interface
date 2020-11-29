@@ -1,0 +1,48 @@
+// Alerts popup
+
+.alerts-popup {
+  display: none;
+  position: fixed;
+  width: 600px;
+  top: 20%;
+  left: 50%;
+  margin-left: calc(-300px - 20px);
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 10px 10px 0px 1000em rgba(0,0,0,0.3);
+  -moz-box-shadow: 10px 10px 0px 1000em rgba(0,0,0,0.3);
+  box-shadow: 10px 10px 0px 1000em rgba(0,0,0,0.3);
+  @include breakpoint-medium {
+    text-align: center;
+    width: 500px;
+    margin-left: calc(-250px - 16px * 2);
+  }
+  @include breakpoint-small { width: 400px; margin-left: calc(-200px - 16px * 2); }
+  @include breakpoint-mobile { width: 300px; margin-left: calc(-150px - 16px * 2); }
+
+  h2 { text-align: center; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    @include breakpoint-medium {
+      flex-flow: row wrap;
+      justify-content: center;
+      height: auto;
+      line-height: inherit;
+      text-align: center;
+      margin-bottom: 0;
+      h2 {
+        width: 100%;
+        order: 2;
+      }
+      h1 {
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+}
