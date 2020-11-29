@@ -1,8 +1,8 @@
 (function() {
-    let source = document.querySelector("main .alerts ul")
+    let source = document.querySelector(".main .alerts ul")
     source.addEventListener("click", function(e) {
         e.preventDefault();
-        if (e.target.nodeName == 'LI' || e.target.parentElement.nodeName == 'LI') loadData(e);
+        if (e.target.nodeName == 'H2' || e.target.nodeName == 'H3') loadData(e);
         e.stopPropagation();
     }, false);
 })();
@@ -32,24 +32,24 @@ function appelAjax(e) {
 
 function updatePage(result) {
     let popup = document.querySelector(".alerts-popup");
-    let page = document.querySelector(".grid-layout");
+    let main = document.querySelector("main");
     document.querySelector("#alertTemperature").innerHTML = result.Temperature;
     document.querySelector("#alertSensor").innerHTML = result.Sensor;
     document.querySelector("#alertDate").innerHTML = result.Date;
     document.querySelector("#alertTime").innerHTML = result.Time;
     document.querySelector("#alertTitle").innerHTML = result.Title;
-    page.classList.add("disable");
+    main.classList.add("disable");
     fadeIn(popup,"block");
 }
 
 (function() {
     let popup = document.querySelector(".alerts-popup");
-    let page = document.querySelector(".grid-layout");
+    let main = document.querySelector("main");
     window.addEventListener("click", function(e) {
         e.preventDefault();
-        if( page.classList.contains("disable") ) {
+        if( main.classList.contains("disable") ) {
             fadeOut(popup);
-            page.classList.remove("disable")
+            main.classList.remove("disable")
         };
         e.stopPropagation();
     }, false);

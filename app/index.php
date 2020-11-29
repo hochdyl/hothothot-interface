@@ -8,36 +8,33 @@
 </head>
 <body>
 
-    <section class="grid-layout">
-        <section class="navbar">
+    <main>
+        <nav class="navbar-left">
             <header class="title">
                 <a href="#"><h2>HOTHOTHOT!</h2></a>
             </header>
-            <nav>
                 <ul>
                     <li class="nav-sensors"><a href="#">Capteurs</a></li>
                     <li class="nav-account"><a href="#">Compte</a></li>
                     <li class="nav-logout"><a href="#">Deconnexion</a></li>
                 </ul>
-            </nav>
             <footer>
                 <p>Pre-release Mockup</p>
             </footer>
-        </section>
+        </nav>
 
         <nav class="navbar-top">
-            <a href="#"><h1>HOTHOTHOT!</h1></a>
+            <a href="#"><h2>HOTHOTHOT!</h2></a>
             <ul>
-                <a href="#"><li>Capteurs</li></a>
-                <a href="#"><li>Alertes</li></a>
-                <a href="#"><li>Compte</li></a>
-                <a href="#"><li>Deconnexion</li></a>
+                <li><a href="#">Capteurs</a></li>
+                <li><a href="#">Compte</a></li>
+                <li><a href="#">Deconnexion</a></li>
             </ul>
         </nav>
 
         <h1 class="title mobile-title">HOTHOTHOT!</h1>
 
-        <main>
+        <div class="main">
             <header class="sensors no-highlight">
                 <ul>
                     <li class="card">Intérieur | 15°</li>
@@ -49,7 +46,7 @@
             </header>
 
             <section class="graphic card">
-                <h1 class="title">Le nom du capteur</h1>
+                <h2 class="title">Le nom du capteur</h2>
                 <ul>
                     <li>
                         <label for="capteurs">Le capteur</label>
@@ -72,66 +69,66 @@
 
             <section class="alerts card">
                 <header>
-                    <h1 class="title">Alertes (5)</h1>
+                    <h2 class="title">Alertes (5)</h2>
                 </header>
                 <ul>
-                    <a data-alert="1" href="#">
-                        <li class="alert-red">
+                    <li class="alert-red">
+                        <a data-alert="1" href="#">
                             <h2>Intérieur</h2>
                             <h3>Le 29/09/2020 à 13:45</h3>
-                        </li>
-                    </a>
-                    <a data-alert="2" href="#">
-                        <li class="alert-yellow">
+                        </a>
+                    </li>
+                    <li class="alert-yellow">
+                        <a data-alert="2" href="#">
                             <h2>Exterieur</h2>
                             <h3>Le 29/09/2020 à 11:35</h3>
-                        </li>
-                    </a>
-                    <a data-alert="3" href="#">
-                        <li class="alert-cyan">
+                        </a>
+                    </li>
+                    <li class="alert-cyan">
+                        <a data-alert="3" href="#">
                             <h2>Test</h2>
                             <h3>Le 29/09/2020 à 08:21</h3>
-                        </li>
-                    </a>
-                    <a data-alert="4" href="#">
-                        <li class="alert-blue">
+                        </a>
+                    </li>
+                    <li class="alert-blue">
+                        <a data-alert="4" href="#">
                             <h2>Nouveau capteur</h2>
                             <h3>Le 29/09/2020 à 06:00</h3>
-                        </li>
-                    </a>
-                    <a data-alert="5" href="#">
-                        <li class="alert-grey">
+                        </a>
+                    </li>
+                    <li class="alert-grey">
+                        <a data-alert="5" href="#">
                             <h2>Capteur additionnel</h2>
                             <h3>Le 29/09/2020 à 05:50</h3>
-                        </li>
-                    </a>
+                        </a>
+                    </li>
                 </ul>
             </section>
 
             <footer>
                 <p>Pre-release Mockup</p>
             </footer>
-        </main>
+        </div>
 
         <nav class="navbar-mobile">
             <ul>
-                <li><a href="#"><img src="img/view_list-black-18dp.svg"></a></li>
-                <li><a href="#"><img src="img/person-black-18dp.svg"></a></li>
-                <li><a href="#"><img src="img/exit_to_app-black-18dp.svg"></a></li>
+                <li><a href="#"><img alt="List icon" src="img/view_list-black-18dp.svg"></a></li>
+                <li><a href="#"><img alt="Account icon" src="img/person-black-18dp.svg"></a></li>
+                <li><a href="#"><img alt="Logout icon" src="img/exit_to_app-black-18dp.svg"></a></li>
             </ul>
         </nav>
-    </section>
+    </main>
 
     <section class="alerts-popup">
         <header>
-            <h2 class="title"><span id="alertTemperature"></span>° | <span id="alertSensor"></span></h2>
-            <h3><span id="alertDate"></span> à <span id="alertTime"></span></h3>
+            <h2 class="title"><span id="alertTemperature">0</span>° | <span id="alertSensor">Sensor</span></h2>
+            <h3><span id="alertDate">01/01/2020</span> à <span id="alertTime">00:00</span></h3>
         </header>
-        <h2 class="title" id="alertTitle"></h2>
+        <h2 class="title" id="alertTitle">Title</h2>
     </section>
 
+    <script src="js/chart.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/animations.js"></script>
 </body>
-<script src="js/chart.js"></script>
-<script src="js/alerts.js"></script>
-<script src="js/animations.js"></script>
 </html>

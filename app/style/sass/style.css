@@ -68,14 +68,14 @@ body {
   }
 }
 
-.grid-layout {
+main {
   display: grid;
   grid-template-columns: 15vw 85vw;
   grid-template-rows: 100vh;
   grid-template-areas: ". .";
 }
 @media screen and (max-width: 1350px) {
-  .grid-layout {
+  main {
     width: 100vw;
     grid-template-columns: 100vw;
     grid-template-rows: 55px calc(100vh - 55px);
@@ -83,41 +83,36 @@ body {
   }
 }
 @media screen and (max-width: 1350px) {
-  .grid-layout {
+  main {
     display: flex;
     flex-flow: row wrap;
   }
 }
 
-.navbar {
+.navbar-left {
   background: linear-gradient(220deg, #333333, #111111);
   color: #EEEEEE;
   position: relative;
 }
 @media screen and (max-width: 1350px) {
-  .navbar {
+  .navbar-left {
     display: none;
   }
 }
-.navbar header {
+.navbar-left header {
   padding: 30px 0;
   text-align: center;
 }
-.navbar nav {
-  height: 100vh;
-  width: 15vw;
+.navbar-left li {
+  margin: 20px 0 20px 70px;
 }
-.navbar nav li {
-  display: inline-block;
-  margin: 10px 0 10px 70px;
-}
-.navbar nav li:hover {
+.navbar-left li:hover {
   color: #AAAAAA;
 }
-.navbar nav .nav-sensors {
+.navbar-left .nav-sensors {
   position: relative;
 }
-.navbar nav .nav-sensors::before {
+.navbar-left .nav-sensors::before {
   content: "";
   background-image: url("../../img/view_list-black-18dp.svg");
   background-size: 25px 25px;
@@ -126,10 +121,10 @@ body {
   position: absolute;
   left: -40px;
 }
-.navbar nav .nav-account {
+.navbar-left .nav-account {
   position: relative;
 }
-.navbar nav .nav-account::before {
+.navbar-left .nav-account::before {
   content: "";
   background-image: url("../../img/person-black-18dp.svg");
   background-size: 25px 25px;
@@ -138,10 +133,10 @@ body {
   position: absolute;
   left: -40px;
 }
-.navbar nav .nav-logout {
+.navbar-left .nav-logout {
   position: relative;
 }
-.navbar nav .nav-logout::before {
+.navbar-left .nav-logout::before {
   content: "";
   background-image: url("../../img/exit_to_app-black-18dp.svg");
   background-size: 25px 25px;
@@ -150,7 +145,7 @@ body {
   position: absolute;
   left: -40px;
 }
-.navbar footer {
+.navbar-left footer {
   width: 100%;
   position: absolute;
   bottom: 30px;
@@ -168,7 +163,17 @@ body {
   line-height: 55px;
   padding: 0 30px;
 }
-.navbar-top h1 {
+@media screen and (max-width: 1350px) {
+  .navbar-top {
+    display: block;
+  }
+}
+@media screen and (max-width: 550px) {
+  .navbar-top {
+    display: none;
+  }
+}
+.navbar-top h2 {
   float: left;
 }
 .navbar-top ul {
@@ -183,16 +188,6 @@ body {
 .navbar-top ul li:hover {
   background-color: #5A5A5A;
 }
-@media screen and (max-width: 1350px) {
-  .navbar-top {
-    display: block;
-  }
-}
-@media screen and (max-width: 550px) {
-  .navbar-top {
-    display: none;
-  }
-}
 
 .navbar-mobile {
   display: none;
@@ -203,8 +198,10 @@ body {
   background-color: #333333;
   color: #EEEEEE;
 }
-.navbar-mobile h1 {
-  float: left;
+@media screen and (max-width: 550px) {
+  .navbar-mobile {
+    display: block;
+  }
 }
 .navbar-mobile ul {
   height: 100%;
@@ -220,13 +217,8 @@ body {
   height: 40px;
   width: 40px;
 }
-@media screen and (max-width: 550px) {
-  .navbar-mobile {
-    display: block;
-  }
-}
 
-main {
+.main {
   display: flex;
   flex-flow: row wrap;
   height: calc(100vh - 30px * 2);
@@ -235,7 +227,7 @@ main {
   position: relative;
 }
 @media screen and (max-width: 1350px) {
-  main {
+  .main {
     height: calc(100vh - 30px * 2 - 55px);
     width: calc(100vw - 30px * 2);
     margin-top: 55px;
@@ -243,76 +235,76 @@ main {
   }
 }
 @media screen and (max-width: 550px) {
-  main {
+  .main {
     height: calc(100vh - 30px * 2 - 55px - 50px);
     width: calc(100vw - 10px * 2);
     padding: 30px 10px;
     margin: 0 0 55px 0;
   }
 }
-main .sensors {
+.main .sensors {
   height: 50px;
   width: 100%;
   margin-bottom: 30px;
   overflow-x: auto;
 }
 @media screen and (max-width: 550px) {
-  main .sensors {
+  .main .sensors {
     margin: 0;
   }
 }
-main .sensors .card {
+.main .sensors .card {
   padding: 10px;
 }
-main .sensors ul {
+.main .sensors ul {
   white-space: nowrap;
   display: flex;
 }
-main .sensors ul li {
+.main .sensors ul li {
   height: 20px;
   line-height: 20px;
   margin-right: 10px;
 }
-main .graphic {
+.main .graphic {
   height: calc(100% - 80px - 30px * 2);
   width: calc(70% - 30px * 2);
   overflow: hidden;
 }
 @media screen and (max-width: 1350px) {
-  main .graphic {
+  .main .graphic {
     height: calc(100% - 80px - 30px * 2 - 55px);
   }
 }
 @media screen and (max-width: 1150px) {
-  main .graphic {
+  .main .graphic {
     width: calc(60% - 30px * 2);
   }
 }
 @media screen and (max-width: 900px) {
-  main .graphic {
+  .main .graphic {
     height: auto;
     width: 100%;
   }
 }
 @media screen and (max-width: 550px) {
-  main .graphic {
+  .main .graphic {
     margin-top: 30px;
   }
 }
-main .graphic h1 {
+.main .graphic h1 {
   padding-bottom: 30px;
 }
-main .graphic input, main .graphic select {
+.main .graphic input, .main .graphic select {
   display: inline;
 }
-main .graphic label {
+.main .graphic label {
   display: inline-block;
   width: 100px;
 }
-main .graphic canvas {
+.main .graphic canvas {
   margin-top: 30px;
 }
-main .alerts {
+.main .alerts {
   height: calc(100% - 80px - 30px * 2);
   width: calc(30% - 30px * 2 - 30px);
   margin-left: 30px;
@@ -320,49 +312,49 @@ main .alerts {
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 1350px) {
-  main .alerts {
+  .main .alerts {
     height: calc(100% - 80px - 30px * 2 - 55px);
   }
 }
 @media screen and (max-width: 1150px) {
-  main .alerts {
+  .main .alerts {
     width: calc(40% - 30px * 3);
   }
 }
 @media screen and (max-width: 900px) {
-  main .alerts {
+  .main .alerts {
     height: 50%;
     width: 100%;
     margin: 30px 0 0 0;
   }
 }
-main .alerts header {
+.main .alerts header {
   padding-bottom: 30px;
   text-align: center;
 }
-main .alerts ul {
+.main .alerts ul {
   max-height: calc(100% - 8px * 2 - 30px);
   overflow-y: auto;
 }
 @media screen and (max-width: 550px) {
-  main .alerts ul {
+  .main .alerts ul {
     max-height: calc(100% - 15px * 2 - 30px);
   }
 }
-main .alerts ul li {
+.main .alerts ul li {
   padding-left: 30px;
 }
-main .alerts ul li h2 {
+.main .alerts ul li h2 {
   padding-top: 5px;
 }
-main .alerts ul li h3 {
+.main .alerts ul li h3 {
   padding-bottom: 5px;
 }
-main .alerts ul li:hover {
+.main .alerts ul li:hover {
   background-color: #EEEEEE;
   border-width: 10px;
 }
-main footer {
+.main footer {
   display: none;
   height: 25px;
   width: 100%;
@@ -371,7 +363,7 @@ main footer {
   text-align: center;
 }
 @media screen and (max-width: 1350px) {
-  main footer {
+  .main footer {
     display: block;
   }
 }

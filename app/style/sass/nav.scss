@@ -1,6 +1,6 @@
 // Website navbar
 
-.navbar {
+.navbar-left {
   background: linear-gradient(220deg, $primary,#111111);
   color: #EEEEEE;
   position: relative;
@@ -10,30 +10,26 @@
     padding: 30px 0;
     text-align: center;
   }
-  nav {
-    height: 100vh;
-    width: 15vw;
-    li {
-      display: inline-block;
-      margin: 10px 0 10px 70px;
-      &:hover { color: $third; }
-    }
-    @mixin nav-icon($link) {
-      position: relative;
-      &::before {
-        content: '';
-        background-image: url($link);
-        background-size: 25px 25px;
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        left: -40px;
-      }
-    }
-    .nav-sensors { @include nav-icon('../../img/view_list-black-18dp.svg'); }
-    .nav-account { @include nav-icon('../../img/person-black-18dp.svg'); }
-    .nav-logout { @include nav-icon('../../img/exit_to_app-black-18dp.svg'); }
+  li {
+    margin: 20px 0 20px 70px;
+    &:hover { color: $third; }
   }
+  @mixin nav-icon($link) {
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url($link);
+      background-size: 25px 25px;
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      left: -40px;
+    }
+  }
+  .nav-sensors { @include nav-icon('../../img/view_list-black-18dp.svg'); }
+  .nav-account { @include nav-icon('../../img/person-black-18dp.svg'); }
+  .nav-logout { @include nav-icon('../../img/exit_to_app-black-18dp.svg'); }
+
   footer {
     width: 100%;
     position: absolute;
@@ -52,7 +48,10 @@
   color: #EEEEEE;
   line-height: 55px;
   padding: 0 30px;
-  h1 { float: left; }
+  @include breakpoint-large { display: block; }
+  @include breakpoint-mobile { display: none; }
+
+  h2 { float: left; }
   ul {
     white-space:nowrap;
     display: flex;
@@ -63,8 +62,6 @@
       &:hover { background-color: $alt; }
     }
   }
-  @include breakpoint-large { display: block; }
-  @include breakpoint-mobile { display: none; }
 }
 
 .navbar-mobile {
@@ -75,7 +72,8 @@
   width: 100vw;
   background-color: $primary;
   color: #EEEEEE;
-  h1 { float: left; }
+  @include breakpoint-mobile { display: block; }
+
   ul {
     height: 100%;
     white-space:nowrap;
@@ -90,5 +88,4 @@
       }
     }
   }
-  @include breakpoint-mobile { display: block; }
 }
