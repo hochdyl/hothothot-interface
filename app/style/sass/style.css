@@ -55,9 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Titillium;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   background-color: #F5F5F5;
 }
 @media screen and (max-width: 1350px) {
@@ -218,7 +215,7 @@ main {
   width: 40px;
 }
 
-.main {
+.main-index {
   display: flex;
   flex-flow: row wrap;
   height: calc(100vh - 30px * 2);
@@ -227,7 +224,7 @@ main {
   position: relative;
 }
 @media screen and (max-width: 1350px) {
-  .main {
+  .main-index {
     height: calc(100vh - 30px * 2 - 55px);
     width: calc(100vw - 30px * 2);
     margin-top: 55px;
@@ -235,76 +232,76 @@ main {
   }
 }
 @media screen and (max-width: 550px) {
-  .main {
+  .main-index {
     height: calc(100vh - 30px * 2 - 55px - 50px);
     width: calc(100vw - 10px * 2);
     padding: 30px 10px;
     margin: 0 0 55px 0;
   }
 }
-.main .sensors {
+.main-index .sensors {
   height: 50px;
   width: 100%;
   margin-bottom: 30px;
   overflow-x: auto;
 }
 @media screen and (max-width: 550px) {
-  .main .sensors {
+  .main-index .sensors {
     margin: 0;
   }
 }
-.main .sensors .card {
+.main-index .sensors .card {
   padding: 10px;
 }
-.main .sensors ul {
+.main-index .sensors ul {
   white-space: nowrap;
   display: flex;
 }
-.main .sensors ul li {
+.main-index .sensors ul li {
   height: 20px;
   line-height: 20px;
   margin-right: 10px;
 }
-.main .graphic {
+.main-index .graphic {
   height: calc(100% - 80px - 30px * 2);
   width: calc(70% - 30px * 2);
   overflow: hidden;
 }
 @media screen and (max-width: 1350px) {
-  .main .graphic {
+  .main-index .graphic {
     height: calc(100% - 80px - 30px * 2 - 55px);
   }
 }
 @media screen and (max-width: 1150px) {
-  .main .graphic {
+  .main-index .graphic {
     width: calc(60% - 30px * 2);
   }
 }
 @media screen and (max-width: 900px) {
-  .main .graphic {
+  .main-index .graphic {
     height: auto;
     width: 100%;
   }
 }
 @media screen and (max-width: 550px) {
-  .main .graphic {
+  .main-index .graphic {
     margin-top: 30px;
   }
 }
-.main .graphic h1 {
+.main-index .graphic h1 {
   padding-bottom: 30px;
 }
-.main .graphic input, .main .graphic select {
+.main-index .graphic input, .main-index .graphic select {
   display: inline;
 }
-.main .graphic label {
+.main-index .graphic label {
   display: inline-block;
   width: 100px;
 }
-.main .graphic canvas {
+.main-index .graphic canvas {
   margin-top: 30px;
 }
-.main .alerts {
+.main-index .alerts {
   height: calc(100% - 80px - 30px * 2);
   width: calc(30% - 30px * 2 - 30px);
   margin-left: 30px;
@@ -312,49 +309,49 @@ main {
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 1350px) {
-  .main .alerts {
+  .main-index .alerts {
     height: calc(100% - 80px - 30px * 2 - 55px);
   }
 }
 @media screen and (max-width: 1150px) {
-  .main .alerts {
+  .main-index .alerts {
     width: calc(40% - 30px * 3);
   }
 }
 @media screen and (max-width: 900px) {
-  .main .alerts {
+  .main-index .alerts {
     height: 50%;
     width: 100%;
     margin: 30px 0 0 0;
   }
 }
-.main .alerts header {
+.main-index .alerts header {
   padding-bottom: 30px;
   text-align: center;
 }
-.main .alerts ul {
+.main-index .alerts ul {
   max-height: calc(100% - 8px * 2 - 30px);
   overflow-y: auto;
 }
 @media screen and (max-width: 550px) {
-  .main .alerts ul {
+  .main-index .alerts ul {
     max-height: calc(100% - 15px * 2 - 30px);
   }
 }
-.main .alerts ul li {
+.main-index .alerts ul li {
   padding-left: 30px;
 }
-.main .alerts ul li h2 {
+.main-index .alerts ul li h2 {
   padding-top: 5px;
 }
-.main .alerts ul li h3 {
+.main-index .alerts ul li h3 {
   padding-bottom: 5px;
 }
-.main .alerts ul li:hover {
+.main-index .alerts ul li:hover {
   background-color: #EEEEEE;
   border-width: 10px;
 }
-.main footer {
+.main-index footer {
   display: none;
   height: 25px;
   width: 100%;
@@ -363,7 +360,74 @@ main {
   text-align: center;
 }
 @media screen and (max-width: 1350px) {
-  .main footer {
+  .main-index footer {
+    display: block;
+  }
+}
+
+.main-generic {
+  display: flex;
+  height: calc(100vh - 30px * 2);
+  width: calc(85vw - 30px * 2);
+  padding: 30px;
+  position: relative;
+}
+@media screen and (max-width: 1350px) {
+  .main-generic {
+    flex-flow: row wrap;
+    height: calc(100vh - 30px * 2 - 55px);
+    width: calc(100vw - 30px * 2);
+    margin-top: 55px;
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-generic {
+    height: calc(100vh - 30px * 2 - 55px - 50px);
+    width: calc(100vw - 10px * 2);
+    padding: 30px 10px;
+    margin: 0 0 55px 0;
+  }
+}
+.main-generic .sensors {
+  height: calc(100% - 30px * 2);
+  width: 100%;
+  overflow-y: auto;
+}
+.main-generic .sensors table {
+  width: 100%;
+  padding: 30px;
+}
+@media screen and (max-width: 900px) {
+  .main-generic .sensors table {
+    padding: 30px 10px;
+  }
+}
+.main-generic .sensors table tbody {
+  height: 500px;
+}
+.main-generic .sensors table tr:first-child th {
+  padding-bottom: 10px;
+}
+.main-generic .sensors table tr th {
+  text-align: left;
+}
+.main-generic .sensors table tr th:last-child {
+  text-align: center;
+}
+.main-generic .sensors table tr td:last-child {
+  text-align: center;
+}
+.main-generic footer {
+  display: none;
+  height: 25px;
+  width: 100%;
+  line-height: 25px;
+  margin-top: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 1350px) {
+  .main-generic footer {
     display: block;
   }
 }
@@ -479,8 +543,19 @@ main {
 }
 @media screen and (max-width: 550px) {
   .card {
-    padding: 20px;
+    padding: 20px 10px;
   }
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.btn:hover {
+  background-color: #AAAAAA;
+  cursor: pointer;
 }
 
 .disable {

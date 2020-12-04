@@ -1,0 +1,53 @@
+// Website main-generic content
+
+.main-generic {
+  display: flex;
+  height: calc(100vh - 30px * 2);
+  width: calc(85vw - 30px * 2);
+  padding: 30px;
+  position: relative;
+  @include breakpoint-large {
+    flex-flow: row wrap;
+    height: calc(100vh - 30px * 2 - 55px);
+    width: calc(100vw - 30px * 2);
+    margin-top: 55px;
+    overflow-y: auto;
+  }
+  @include breakpoint-mobile {
+    height: calc(100vh - 30px * 2 - 55px - 50px);
+    width: calc(100vw - 10px * 2);
+    padding: 30px 10px;
+    margin: 0 0 55px 0;
+  }
+
+  .sensors {
+    height: calc(100% - 30px * 2);
+    width: 100%;
+    overflow-y: auto;
+
+    table {
+      width: 100%;
+      padding: 30px;
+      @include breakpoint-small { padding: 30px 10px; }
+
+      tbody { height: 500px; }
+      tr:first-child th { padding-bottom: 10px; }
+      tr th {
+        text-align: left;
+        &:last-child { text-align: center; }
+      }
+      tr td:last-child { text-align: center; }
+    }
+  }
+
+
+  footer {
+    display: none;
+    height: 25px;
+    width: 100%;
+    line-height: 25px;
+    margin-top: 30px;
+    text-align: center;
+    @include breakpoint-large { display: block }
+  }
+}

@@ -21,9 +21,6 @@
 
 body {
   font-family: Titillium;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   background-color: #F5F5F5;
   @include breakpoint-large {
     overflow-y: auto;
@@ -57,7 +54,8 @@ main {
 @import "nav";
 
 // Website main content
-@import "main";
+@import "main-index";
+@import "main-generic";
 
 // Alerts popup
 @import "popup";
@@ -79,6 +77,7 @@ main {
   background-color: $primary;
   @include breakpoint-mobile { display: block; }
 }
+
 .card {
   padding: 30px;
   border-radius: 20px;
@@ -86,8 +85,17 @@ main {
   -webkit-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
   -moz-box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
   box-shadow: 0px 0px 20px -10px rgba(50,50,50,0.45);
-  @include breakpoint-mobile { padding: 20px; }
+  @include breakpoint-mobile { padding: 20px 10px; }
 }
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  &:hover { background-color: $third; cursor: pointer; }
+}
+
 .disable { pointer-events: none; }
 .no-highlight {
   -webkit-touch-callout: none;

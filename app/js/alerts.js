@@ -1,5 +1,5 @@
 (function() {
-    let source = document.querySelector(".main .alerts ul")
+    let source = document.querySelector("main .alerts ul")
     source.addEventListener("click", function(e) {
         e.preventDefault();
         if (e.target.nodeName == 'H2' || e.target.nodeName == 'H3') loadData(e);
